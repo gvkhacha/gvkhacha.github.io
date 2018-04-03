@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Testing Out Textile"
+date:   2018-04-02 20:32:00 -0700
+categories: jekyll
+---
+
+h1. This is a Heading 1
+
+This might be an introductory paragraph on the general topic.
+
+h2. Heading 2 gets more specific
+
+Now we're getting into the details.
