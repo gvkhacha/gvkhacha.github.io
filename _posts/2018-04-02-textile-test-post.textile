@@ -2,7 +2,7 @@
 layout: post
 title:  "Testing Out Textile"
 date:   2018-04-02 20:32:00 -0700
-categories: jekyll
+categories: [jekyll]
 ---
 
 h1. This is a Heading 1

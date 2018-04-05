@@ -107,7 +107,9 @@
                         <h3>{{ post.title }} </h3>
                         <time>{{ post.date | date: "%-d %B %Y" }}</time> 
                       </a><hr/>
-                      {{ post.excerpt }}
+                      <span class="catblock-excerpt">
+                        {{ post.excerpt }}
+                      </span>
                     {% endif %}
                   {% endfor %}
                 {% endfor %}
