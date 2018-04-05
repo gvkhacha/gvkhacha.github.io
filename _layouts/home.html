@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body class="home-page">
+
+    <main class="page-content" aria-label="Content" style="padding:0;">
+      <section id="home-main" class="text-center">
+        <h1>Garik Khachatryan</h1>
+        <p class="subtitle"><span><a href="#">Resume</a><a href="#">Blog</a></span></p>
+      </section>
+      <section id="home-intro" class="text-center">
+        <div class="container">
+          <h1>About Me</h1>
+          <p>I am currently a Software Engineering undergraduate student of University of California, Irvine (UCI). I plan to graduate with a bachelors of Software Engineering in March of 2020. Since Fall 2017, I have been working in the Learning and Academic Resource Center (LARC) at UCI as a Tutorial Leader for the second introductory computer science course.</p>
+        </div>
+      </section>
+      <section id="home-portfolio">
+      </section>
+      <section id="home-blog">
+        <div class="container">
+          <h1 class="text-center">Blogging</h1>
+          <p class="text-center">I was recently encouraged by a close friend of mine to begin blogging as a method for documenting and sharing my thoughts and passions. As I spend much of my time with coursework, I expect some of the categories to be based on concepts observed from class. I found that many courses, as expected with large classes and 10-week periods, focus more on the technicalities and semantics rather than the practical applications. I feel as though my coursework is not complete without either an application or observation of practical and real world experiences; and document this journey through these posts. </p>
+          <div class="home-cat">
+            {% for category in site.categories %}
+              <div class="home-catblock" id="{{ category | first | remove:' ' }}">
+                <a href="/category/{{category | first }}"><h2 class="text-center">{{ category | first }}</h2></a>
+                 {% for posts in category %}
+                   {% for post in posts limit:1 %}
+                     {% if post.url %}
+                      <a href="{{ post.url }}">
+                        <h3>{{ post.title }} </h3>
+                        <time>{{ post.date | date: "%-d %B %Y" }}</time> 
+                      </a>
+                      {{ post.excerpt }}
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+      </section>
+      <section id="home-goal">
+        <div class="container">
+        </div>
+      </section>
+        {{ content }}
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
+
+<!-- {% for post in site.posts limit:1 %}
+... Show the post ...
+{% endfor %}
+
+
+       {% for category in site.categories %}
+           <div class="catbloc" id="{{ category | first | remove:' ' }}">
+                <h2>{{ category | first }}</h2>
+
+                <ul>
+                   {% for posts in category %}
+                     {% for post in posts %}
+                       {% if post.url %}
+                        <li>
+                          <a href="{{ post.url }}">
+                            <time>{{ post.date | date: "%-d %B %Y" }}</time>
+                            {{ post.title }}
+                          </a>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+               </ul>
+           </div>
+      {% endfor %} -->
