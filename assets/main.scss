@@ -6,6 +6,7 @@
 
 html{
 	height: 100%;
+	overflow-x: hidden;
 }
 
 body{
@@ -31,7 +32,7 @@ h1{
 }
 
 .container{
-	width:100%;
+	width: 95%;
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0px 15px;
