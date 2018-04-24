@@ -32,35 +32,35 @@ h1{
 	font-size: 32pt;
 }
 
-.container{
-	width: 95%;
+.container, .wrapper{
+	width: 90%;
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0px 15px;
 }
 @media (min-width: 576px) {
-	.container{
+	.container, .wrapper{
 		max-width: 540px;
 	}
 }
 
 // // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-	.container{
+	.container, .wrapper{
 		max-width: 720px;
 	}
 }
 
 // // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-	.container{
+	.container, .wrapper{
 		max-width: 960px;
 	}
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-	.container{
+	.container, .wrapper{
 		max-width: 1140px;
 	}
 }

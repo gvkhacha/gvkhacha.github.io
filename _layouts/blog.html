@@ -16,7 +16,7 @@ layout: default
         <i>Category: 
           {% for category in post.categories %}
               <a href="/category/{{category | slugify }}">
-                {{ category | capitalize }}, 
+                {{ category | capitalize }}{% if forloop.last == false %},{% endif %} 
               </a>
           {% endfor %} - Published {{ post.date | date: date_format }}</i>
           <span class="blog-excerpts">{{ post.excerpt }}</span>
