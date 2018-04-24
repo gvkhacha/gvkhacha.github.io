@@ -19,10 +19,7 @@ layout: default
                 {{ category | capitalize }}, 
               </a>
           {% endfor %} - Published {{ post.date | date: date_format }}</i>
-
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
+          <span class="blog-excerpts">{{ post.excerpt }}</span>
       {%- endfor -%}
 
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
