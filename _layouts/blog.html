@@ -9,8 +9,9 @@ layout: default
 
   {%- if site.posts.size > 0 -%}
       {%- for post in site.posts -%}
+      <div class="blog-post">
         {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
-        <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        <h2><{{ post.title | escape }}</a></h2>
         <i>Category: 
           {% for category in post.categories %}
               <a href="/category/{{category | slugify }}">
@@ -18,6 +19,9 @@ layout: default
               </a>
           {% endfor %} - Published {{ post.date | date: date_format }}</i>
           <span class="blog-excerpts">{{ post.excerpt }}</span>
+          <a href="{{ post.url | relative_url }}"><button class="more_btn">Read More</button></a>
+        <hr />
+      </div>
       {%- endfor -%}
 
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
