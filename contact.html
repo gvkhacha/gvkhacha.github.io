@@ -1,0 +1,42 @@
+---
+layout: page
+title: Contact Me
+permalink: /contact/
+---
+
+<div class="contactpage">
+	<form class="contactform" action="https://formspree.io/garik.kha@gmail.com" method="POST">
+		<!-- Contact form powered by FormSpree:
+			Styles adapted from Aina Requena on CodePen
+		  -->
+		<div class="form-field">
+			<input id="name" class="input-text" type="text" name="name" onkeyup="inputPressed(this)" required>
+			<label class="label" for="name">Name</label>
+		</div>
+		<div class="form-field">
+			<input id="email" class="input-text" type="email" name="_replyto" onkeyup="inputPressed(this)" required>
+			<label class="label" for="email">E-mail</label>
+		</div>
+		<div class="form-field">
+			<input id="message" class="input-text" type="text" name="message" onkeyup="inputPressed(this)" required>
+			<label class="label" for="message">Message</label>
+		</div>
+		<div class="form-field">
+			<input class="submit-btn" type="submit" value="Send">
+		</div>
+		<input type="hidden" name="_next" value="{{ site.url }}" />
+	</form> 
+	<div class="info">
+		hallo
+	</div>
+</div>
+
+<script>
+function inputPressed(input){
+	if(input.value){
+		input.classList.add('not-empty');
+	}else{
+		input.classList.remove('not-empty');
+	}
+}
+</script>

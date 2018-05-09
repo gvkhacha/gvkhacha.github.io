@@ -1,0 +1,47 @@
+.contactpage
+	display: flex
+	flex-wrap: wrap
+
+.contactform
+	flex: 1
+	.form-field
+		position: relative
+		margin: 32px 0px
+	.input-text
+		display: block
+		width: 90%
+		height: 36px
+		border-width: 0 0 2px 0
+		border-color: #000
+		font-size: 18px
+		line-height: 26px
+	.input-text:focus
+		outline: none
+	.input-text:focus + .label
+		transform: translateY(-28px)
+	.not-empty + .label
+		transform: translateY(-28px)
+	.label
+		position: absolute
+		left: 20px
+		bottom: 11px
+		font-size: 18px
+		line-height: 26px
+		color: #888
+		transition: transform .2s ease-in-out
+	.submit-btn
+		display: inline-block
+		background-color: #000
+		color: #fff
+		letter-spacing: 2px
+		text-transform: uppercase
+		font-size: 18px
+		line-height: 26px
+		padding: 8px 16px
+		border: none
+		cursor: pointer
+
+
+
+.info
+	flex: 1
