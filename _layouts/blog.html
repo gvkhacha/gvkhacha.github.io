@@ -8,18 +8,18 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-      {%- for post in site.posts -%}
+      {%- for sitePosts in site.posts -%}
       <div class="blog-post">
         {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
-        <h2><{{ post.title | escape }}</a></h2>
+        <h2>{{ sitePosts.title }}</a></h2>
         <i>Category: 
-          {% for category in post.categories %}
+          {% for category in sitePosts.categories %}
               <a href="/category/{{category | slugify }}">
                 {{ category | capitalize }}{% if forloop.last == false %},{% endif %} 
               </a>
-          {% endfor %} - Published {{ post.date | date: date_format }}</i>
-          <span class="blog-excerpts">{{ post.excerpt }}</span>
-          <a href="{{ post.url | relative_url }}"><button class="more_btn">Read More</button></a>
+          {% endfor %} - Published {{ sitePosts.date | date: date_format }}</i>
+          <span class="blog-excerpts">{{ sitePosts.excerpt }}</span>
+          <a href="{{ sitePosts.url | relative_url }}"><button class="more_btn">Read More</button></a>
         <hr />
       </div>
       {%- endfor -%}

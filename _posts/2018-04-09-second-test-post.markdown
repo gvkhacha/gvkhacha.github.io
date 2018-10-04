@@ -1,16 +1,15 @@
 ---
 layout: post
-title:  "Testing Out Textile"
-date:   2018-04-02 20:32:00 -0700
+title:  Second test Post
+date:   2018-04-09 12:30:00 -0700
 categories: [jekyll]
 ---
-
-h1. This is a Heading 1
+This is a test post to check categories and date format.
 
 This might be an introductory paragraph on the general topic.
 
 <!--more-->
 
-h2. Heading 2 gets more specific
+## Heading 2 gets more specific
 
 Now we're getting into the details.
