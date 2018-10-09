@@ -78,6 +78,7 @@
               <ul>
                 <li>WordPress - Web Design &amp; E-Commerce</li>
                 <li>Jekyll - Blogging (This Website!)</li>
+                <li>Shopify - E-Commerce &amp; Apps</li>
               </ul>
             </span>
           </div>
@@ -90,7 +91,7 @@
           <div class="home-cat">
             {% for category in site.categories %}
               <div class="home-catblock" id="{{ category | first | remove:' ' }}">
-                <a href="/category/{{category | first }}"><h2 class="text-center">{{ category | first | capitalize }}</h2></a>
+                <a href="/category/{{category | first | slugify }}"><h2 class="text-center">{{ category | first | capitalize_all }}</h2></a>
                  {% for posts in category %}
                    {% for post in posts limit:1 %}
                      {% if post.url %}
