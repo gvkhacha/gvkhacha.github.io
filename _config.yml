@@ -17,7 +17,8 @@ title: Garik Khachatryan
 email: garik.kha@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   My name is Garik Khachatryan and this is my personal website.
-  I am a Software Engineering undergraduate student, and this is a hub
+  I am a recent graduate of University of California, Irvine, 
+  with a Bachelor's Degree in Software Engineering and this is a hub
   for my achievements and blog.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
